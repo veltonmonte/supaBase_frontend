@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <title>Product CRUD</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Produtos</title>
 </head>
 <body>
-  <h1>Product CRUD</h1>
 
-  <form id="add-product-form">
-    <h2>Add Product</h2>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    <label for="price">Price:</label>
-    <input type="number" id="price" name="price" required step="0.01">
-    <button type="submit">Add</button>
-  </form>
+    <h1>Adicionar Produto</h1>
 
-  <ul id="products"></ul>
+    <form id="addProductForm">
+        <input type="text" id="addName" placeholder="Nome do produto">
+        <input type="number" id="addPrice" placeholder="Preço">
+        <button type="submit">Adicionar</button>
+    </form>
 
-  <script src="app.js"></script>
-  <script>
-    // Call fetchProducts() when the page loads
-    window.addEventListener('load', fetchProducts);
-  </script>
+    <hr>
+
+    <h1>Atualizar Produto</h1>
+
+    <form id="updateProductForm">
+        <input type="number" id="updateProductId" placeholder="ID do Produto">
+        <input type="text" id="updateName" placeholder="Nome">
+        <input type="number" id="updatePrice" placeholder="Preço">
+        <button type="submit">Atualizar</button>
+    </form>
+
+    <hr>
+
+    <h1>Lista de Produtos</h1>
+
+    <ul id="productList"></ul>
+
+    <script src="app.js"></script>
 </body>
 </html>
+
