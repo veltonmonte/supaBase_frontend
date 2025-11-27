@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Produtos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Adicionar Produto</h1>
+    
 
     <form id="addProductForm">
-        <input type="text" id="addName" placeholder="Nome do produto">
-        <input type="number" id="addPrice" placeholder="Preço">
+        <h1>Adicionar Produto</h1>
+        <input type="text" id="addName" placeholder="Nome do produto" class="input">
+        <input type="number" id="addPrice" placeholder="Preço" class="input">
         <button type="submit">Adicionar</button>
     </form>
 
-    <hr>
 
-    <h1>Atualizar Produto</h1>
+    
 
     <form id="updateProductForm">
-        <input type="number" id="updateProductId" placeholder="ID do Produto">
-        <input type="text" id="updateName" placeholder="Nome">
-        <input type="number" id="updatePrice" placeholder="Preço">
+        <h1>Atualizar Produto</h1>
+        <input type="number" id="updateProductId" placeholder="ID do Produto" class="input">
+        <input type="text" id="updateName" placeholder="Nome" class="input">
+        <input type="number" id="updatePrice" placeholder="Preço" class="input">
         <button type="submit">Atualizar</button>
     </form>
 
-    <hr>
+
+    
+
+    <form id="deleteProductForm">
+        <h1>Deletar Produto</h1>
+        <input type="number" id="deleteProductId" placeholder="ID do Produto" class="input">
+        <button type="submit">Deletar</button>
+    </form>
+
 
     <h1>Lista de Produtos</h1>
 
@@ -34,4 +44,3 @@
     <script src="app.js"></script>
 </body>
 </html>
-

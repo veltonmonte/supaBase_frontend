@@ -52,5 +52,20 @@ updateForm.addEventListener("submit", async (e) => {
     fetchProducts();
 });
 
-// Carrega ao iniciar
+// DELETAR PRODUTO
+const deleteForm = document.getElementById("deleteProductForm");
+
+deleteForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const id = document.getElementById("deleteProductId").value;
+
+    await fetch(`${API_URL}/${id}`, {
+        method: "DELETE"
+    });
+
+    fetchProducts();
+});
+
+// Carregar produtos ao iniciar
 fetchProducts();
