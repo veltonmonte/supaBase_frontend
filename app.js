@@ -1,4 +1,4 @@
-const API_URL = "http://18.232.181.79:3000/products";
+const API_URL = "http://13.222.53.237:3000/products";
 
 // LISTAR PRODUTOS
 async function fetchProducts() {
@@ -69,4 +69,5 @@ deleteForm.addEventListener("submit", async (e) => {
 
 // Carregar produtos ao iniciar
 fetchProducts();
+
 
