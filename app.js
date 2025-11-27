@@ -23,7 +23,7 @@ const searchResultDiv = document.querySelector('#search-result');
 // GET ALL PRODUCTS
 // ------------------------
 async function fetchProducts() {
-  const response = await fetch('http://3.92.92.111:3000/products');
+  const response = await fetch('http://44.221.67.33:3000/products');
   const products = await response.json();
 
   productList.innerHTML = '';
@@ -80,7 +80,7 @@ addProductForm.addEventListener('submit', async (event) => {
 });
 
 async function addProduct(name, price, description) {
-  const response = await fetch('http://3.92.92.111:3000/products', {
+  const response = await fetch('http://44.221.67.33/products', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, price, description })
@@ -93,7 +93,7 @@ async function addProduct(name, price, description) {
 // DELETE PRODUCT
 // ------------------------
 async function deleteProduct(id) {
-  const response = await fetch(`http://3.92.92.111:3000/products/${id}`, {
+  const response = await fetch(`http://44.221.67.33:3000/products/${id}`, {
     method: 'DELETE'
   });
   return response.json();
@@ -118,7 +118,7 @@ updateProductForm.addEventListener('submit', async (event) => {
 });
 
 async function updateProduct(id, name, price, description) {
-  const response = await fetch(`http://3.92.92.111:3000/products/${id}`, {
+  const response = await fetch(`http://44.221.67.33:3000/products/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, price, description })
@@ -135,7 +135,7 @@ searchForm.addEventListener('submit', async (event) => {
 
   const id = searchIdInput.value;
 
-  const response = await fetch(`http://3.92.92.111:3000/products/${id}`);
+  const response = await fetch(`http://44.221.67.33:3000/products/${id}`);
   const product = await response.json();
 
   if (!product || !product.id) {
@@ -154,4 +154,5 @@ searchForm.addEventListener('submit', async (event) => {
 
 // LOAD PRODUCTS AT START
 fetchProducts();
+
 
